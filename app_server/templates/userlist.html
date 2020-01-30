@@ -1,0 +1,48 @@
+
+		{% extends "page.html" %}
+		{% block content %}
+		<div>
+			<div>
+				<!-- <form>
+					Добавить задачу
+					<input class="path_input" name="from" value="A000" size="5">
+					.<input class="path_input" name="from_folder" value="/users/"/>
+					на
+					<input class="path_input" name="to" value="A000"/>
+					.
+					<input class="path_input" name="to_folder" value="/users/"/>
+				</form> -->
+			</div>
+			
+			<div id="tables_container">
+				<div id="task_header">Запросы</div>
+			<table border="0" class="task_table">
+				
+			{% for request in request_list %}
+				
+					<tr>
+						<td>
+							{{request.username}}
+						</td>
+						<td>
+							<a href="{{request.glpi_link}}">{{request.computername}}</a>
+						</td>
+						<td>
+							{{request.status}}
+						</td>
+						<td>{{request.ip}}</td>
+						<td>
+							{{request.old}}
+						</td>
+					</tr>				
+			{% endfor%}
+			<tr><td></td></tr>
+			</table>
+			<br>
+			
+		</div>
+
+		{% endblock %}
+	</div> <!-- tab container -->
+	</body>
+</html>
