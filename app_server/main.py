@@ -44,12 +44,12 @@ class Agent:   # class deprecated
 
 class User_Request():
 	request_list = list()
-	def __init__(self, username, computername, ip):
+	def __init__(self, username, computername, iplist):
 		self.computername = computername
 		self.username = username
 		self.glpi_link = "http://{}/glpi/front/computer.php?is_deleted=0&as_map=0&criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=1&criteria%5B0%5D%5Bsearchtype%5D=contains&criteria%5B0%5D%5Bvalue%5D={}&search=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&itemtype=Computer&start=0".format(glpi_ip, self.computername)
 		self.status = "new"
-		self.ip = ip
+		self.ip = iplist
 		self.old = 0
 		User_Request.request_list.append(self)
 
@@ -62,10 +62,10 @@ class Root:
 		return tmpl.render(title='Запросы юзверей',request_list=User_Request.request_list)
 
 	@cherrypy.expose
-	def register_user_request(self,username,computername):
-		ip = cherrypy.request.remote.ip
+	def register_user_request(self,username,computername,iplist):
+		#ip = cherrypy.request.remote.ip
 		#print("Agent {} registred from {}".format(username, ip))
-		User_Request(username, computername, ip)
+		User_Request(username, computername, iplist)
 
 	@cherrypy.expose
 	def connect(self):
