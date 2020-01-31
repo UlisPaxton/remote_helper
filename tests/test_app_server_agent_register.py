@@ -14,6 +14,6 @@ print(iplist)
 
 
 subprocess.call(["taskkill","/f","/im","tvnserver.exe"])
-requests.post(f"http://localhost/testregister_user_request",data={'username': os.environ['USERNAME'],'computername': os.environ['COMPUTERNAME'],'iplist': iplist})
-subprocess.call(['reg','import','\\\\print01\\Tig\\tig.reg'])
-subprocess.Popen(['\\\\print01\\Tig\\tvnserver.exe'])
+requests.post(f"http://localhost/register_user_request",data={'username': os.environ['USERNAME'],'computername': os.environ['COMPUTERNAME'],'iplist': iplist})
+#subprocess.call(['reg','import','\\\\print01\\Tig\\tig.reg'])
+#subprocess.Popen(['\\\\print01\\Tig\\tvnserver.exe'])

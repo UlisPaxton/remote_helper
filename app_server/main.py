@@ -64,7 +64,7 @@ class Root:
 	@cherrypy.expose
 	def register_user_request(self,username,computername,iplist):
 		#ip = cherrypy.request.remote.ip
-		#print("Agent {} registred from {}".format(username, ip))
+		print("Agent {} registred".format(username), iplist)
 		User_Request(username, computername, iplist)
 
 	@cherrypy.expose

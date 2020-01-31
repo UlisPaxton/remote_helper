@@ -30,7 +30,7 @@
 						<td>
 							{{request.status}}
 						</td>
-						<td>{% for ip in request.iplist%} {{ip}} {% endfor %}</td>
+						<td>{% for ip in request.ip %} <a>{{ip}}</a> {% endfor %}</td>
 						<td>
 							{{request.old}}
 						</td>
