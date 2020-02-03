@@ -1,7 +1,7 @@
 import cherrypy
 from jinja2 import Environment, FileSystemLoader
 import requests
-from time import sleep
+from time import sleep, ctime
 from pdb import set_trace as d
 import os
 from threading import Thread
@@ -14,11 +14,11 @@ logging.basicConfig(filename='helper.log',filemode='a',format='%(asctime)s,%(mse
 current_dir = os.path.dirname(os.path.abspath(__file__))
 env = Environment(loader=FileSystemLoader('templates'))
 glpi_ip = '192.168.112.112'
-request_old = 5
+request_old = 2
 
 def old_cheker():
 	while True:
-		sleep(10)
+		sleep(180)
 		for user_request in User_Request.request_list:
 	
 			if user_request.old > request_old:
@@ -51,6 +51,7 @@ class User_Request():
 		self.status = "new"
 		self.ip = iplist
 		self.old = 0
+		self.request_time = ctime()
 		User_Request.request_list.append(self)
 
 class Root:
@@ -79,13 +80,31 @@ class Root:
 			if agent.name == username and agent.ip == cherrypy.request.remote.ip:
 				agent.status = status
 
+	@cherrypy.expose			
+	def log(self):
+		tmpl = env.get_template('log.html')
+		f = open('helper.log','r')
+		lines = f.readlines()
+		#print('LOG:', lines[0])
+
+		#splited_lines = lines.split("/n")
+
+		lines.reverse()
+		#for line in lines[0:5]:
+		#	line.replace('\n','<br>')
+		f.close()
+		return tmpl.render(title='Логи',log_list=lines[0:500])
+
 
 
 cherrypy.config.update({'error_page.404': Root.error_page_404})
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
 						'server.socket_port': 80,
 						})
-conf = {'/images': {'tools.staticdir.on': True,
+conf = {'/css':
+        { 'tools.staticdir.on':True,
+          'tools.staticdir.dir': os.path.join(current_dir, 'css')},
+        '/images': {'tools.staticdir.on': True,
                       'tools.staticdir.dir': os.path.join(current_dir, 'images')}}
 #checker_Thread = Thread(target=old_cheker).start()
 #checker_Thread.join()

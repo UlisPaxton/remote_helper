@@ -2,6 +2,7 @@
 		{% extends "page.html" %}
 		{% block content %}
 		<div>
+
 			<div>
 				<!-- <form>
 					Добавить задачу
@@ -15,24 +16,27 @@
 			</div>
 			
 			<div id="tables_container">
-				<div id="task_header">Запросы</div>
-			<table border="0" class="task_table">
-				
+				<div id="task_header"><h4>Запросы</h4></div>
+			<table  class="task_table">
+				<tr id=table_header> <td class="header_td">Время</td> <td class="header_td">Логин</td>  <td class="header_td">Компьютер</td><td class="header_td">Статус</td><td class="header_td">IP</td></tr>
 			{% for request in request_list %}
 				
-					<tr>
-						<td>
+					<tr class="table_data_row">
+						<td class="table_data_cell">
+							{{request.request_time}}
+						</td>
+						<td class="table_data_cell">
 							{{request.username}}
 						</td>
-						<td>
+						<td class="table_data_cell">
 							<a href="{{request.glpi_link}}">{{request.computername}}</a>
 						</td>
-						<td>
+						<td class="table_data_cell">
 							{{request.status}}
 						</td>
-						<td>{% for ip in request.ip %} <a>{{ip}}</a> {% endfor %}</td>
+						<td class="table_data_cell"><a class="iplink">{{request.ip}}</a></td>
 						<td>
-							{{request.old}}
+							<!-- {{request.old}} -->
 						</td>
 					</tr>				
 			{% endfor%}

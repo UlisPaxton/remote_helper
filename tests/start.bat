@@ -1,0 +1,1 @@
+python Y:\projects\helper\tests\test_app_server_agent_register.py
