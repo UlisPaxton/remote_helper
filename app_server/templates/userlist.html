@@ -34,7 +34,7 @@
 						<td class="table_data_cell">
 							{{request.status}}
 						</td>
-						<td class="table_data_cell"><a class="iplink">{{request.ip}}</a></td>
+						<td class="table_data_cell"><a class="iplink">{% for ip in request.ip %}  {{ip}}, {% endfor %}</a></td>
 						<td>
 							<!-- {{request.old}} -->
 						</td>

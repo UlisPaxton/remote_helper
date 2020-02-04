@@ -1,0 +1,24 @@
+
+		{% extends "page.html" %}
+		{% block content %}
+		<div>
+
+			
+			
+			<div id="tables_container">
+				<div id="task_header"><h4>Лог</h4></div>
+			<table  class="task_table">
+				
+			{% for log in log_list %}
+				{{log}}<br>
+						
+			{% endfor%}
+			
+			<br>
+			
+		</div>
+
+		{% endblock %}
+	</div> <!-- tab container -->
+	</body>
+</html>

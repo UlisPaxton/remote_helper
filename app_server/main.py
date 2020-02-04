@@ -66,7 +66,12 @@ class Root:
 	def register_user_request(self,username,computername,iplist):
 		#ip = cherrypy.request.remote.ip
 		print("Agent {} registred".format(username), iplist)
-		User_Request(username, computername, iplist)
+		if type(iplist) == str :
+			ips = list()
+			ips.append(iplist)
+			User_Request(username, computername, ips)
+		else:
+			User_Request(username, computername, iplist)
 
 	@cherrypy.expose
 	def connect(self):
@@ -106,6 +111,6 @@ conf = {'/css':
           'tools.staticdir.dir': os.path.join(current_dir, 'css')},
         '/images': {'tools.staticdir.on': True,
                       'tools.staticdir.dir': os.path.join(current_dir, 'images')}}
-#checker_Thread = Thread(target=old_cheker).start()
+checker_Thread = Thread(target=old_cheker).start()
 #checker_Thread.join()
 cherrypy.quickstart(Root(),'/',config=conf)
