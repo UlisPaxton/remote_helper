@@ -7,6 +7,7 @@ header {
 menu {
 	margin-left: -35px;
 }
+
 #spliter {
 	height: 50%;
 }
@@ -15,7 +16,6 @@ menu {
 	background-color: black;
 	color: #fff;
 	text-decoration: none;
-	
 	padding: 10px;
 	padding-bottom: 8px;
 }
@@ -23,8 +23,10 @@ menu {
 .menu_button:hover {
 	border-bottom: 5px solid rgb(255,127,39);
 	}
+
 .menu_button:active {
 	border-bottom: 5px solid rgb(255,255,0);
+
 }
 #tables_container {
 	border: 1px solid black;
@@ -39,10 +41,12 @@ menu {
 .header_td {
 	border: 0px solid;
 }
+
 .task_table {
 	min-width: 30%;
 	max-width: 98%;
 }
+
 .iplink {
 	text-decoration: underline;
 	color: blue;

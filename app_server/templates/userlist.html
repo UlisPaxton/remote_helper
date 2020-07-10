@@ -2,23 +2,16 @@
 		{% extends "page.html" %}
 		{% block content %}
 		<div>
-
-			<div>
-				<!-- <form>
-					Добавить задачу
-					<input class="path_input" name="from" value="A000" size="5">
-					.<input class="path_input" name="from_folder" value="/users/"/>
-					на
-					<input class="path_input" name="to" value="A000"/>
-					.
-					<input class="path_input" name="to_folder" value="/users/"/>
-				</form> -->
-			</div>
-			
 			<div id="tables_container">
 				<div id="task_header"><h4>Запросы</h4></div>
+
 			<table  class="task_table">
-				<tr id=table_header> <td class="header_td">Время</td> <td class="header_td">Логин</td>  <td class="header_td">Компьютер</td><td class="header_td">Статус</td><td class="header_td">IP</td></tr>
+				<tr id=table_header> <td class="header_td">Время</td> <td class="header_td">Логин</td>
+                    <td class="header_td">Компьютер</td>
+                    <td class="header_td">Статус</td>
+                    <td class="header_td">IP</td>
+                </tr>
+
 			{% for request in request_list %}
 				
 					<tr class="table_data_row">
@@ -40,7 +33,8 @@
 						</td>
 					</tr>				
 			{% endfor%}
-			<tr><td></td></tr>
+			<tr><td>
+            </td></tr>
 			</table>
 			<br>
 			
@@ -48,5 +42,3 @@
 
 		{% endblock %}
 	</div> <!-- tab container -->
-	</body>
-</html>

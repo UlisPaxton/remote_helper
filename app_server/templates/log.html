@@ -1,17 +1,14 @@
 
 		{% extends "page.html" %}
 		{% block content %}
-		<div>
 
-			
-			
+            <div>
 			<div id="tables_container">
 				<div id="task_header"><h4>Лог</h4></div>
 			<table  class="task_table">
 				
 			{% for log in log_list %}
-				{{log}}<br>
-						
+				<p>{{log}}</p>
 			{% endfor%}
 			
 			<br>
@@ -20,5 +17,3 @@
 
 		{% endblock %}
 	</div> <!-- tab container -->
-	</body>
-</html>

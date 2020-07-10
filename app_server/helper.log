@@ -1,0 +1,631 @@
+14:15:41,244 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Listening for SIGTERM.
+14:15:41,247 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Bus STARTING
+14:15:41,249 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Set handler for console events.
+14:15:41,253 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Started monitor thread 'Autoreloader'.
+14:15:41,483 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Serving on http://0.0.0.0
+14:15:41,487 cherrypy.error INFO [10/Jul/2020:14:15:41] ENGINE Bus STARTED
+14:16:49,541 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:16:49,545 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Stopped thread 'Autoreloader'.
+14:16:49,556 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Bus STOPPING
+14:16:49,688 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:16:49,698 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Removed handler for console events.
+14:16:49,705 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Bus STOPPED
+14:16:49,710 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Bus EXITING
+14:16:49,710 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Waiting for child threads to terminate...
+14:16:49,716 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Bus EXITED
+14:16:49,720 cherrypy.error INFO [10/Jul/2020:14:16:49] ENGINE Waiting for thread Thread-1.
+14:17:06,224 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Listening for SIGTERM.
+14:17:06,227 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Bus STARTING
+14:17:06,229 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Set handler for console events.
+14:17:06,233 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Started monitor thread 'Autoreloader'.
+14:17:06,461 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Serving on http://127.0.0.1
+14:17:06,465 cherrypy.error INFO [10/Jul/2020:14:17:06] ENGINE Bus STARTED
+14:17:08,591 cherrypy.error.2964429772488 ERROR [10/Jul/2020:14:17:08] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 57, in index
+    print(len(Agent.agent_list))
+NameError: name 'Agent' is not defined
+14:17:08,656 cherrypy.error.2964429772488 INFO [10/Jul/2020:14:17:08] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+14:17:08,660 cherrypy.access.2964429772488 INFO 127.0.0.1 - - [10/Jul/2020:14:17:08] "GET / HTTP/1.1" 500 1565 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:17:08,703 cherrypy.access.2964429772488 INFO 127.0.0.1 - - [10/Jul/2020:14:17:08] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:17:31,520 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:17:31,566 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Stopped thread 'Autoreloader'.
+14:17:31,614 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Bus STOPPING
+14:17:31,733 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:17:31,752 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Removed handler for console events.
+14:17:31,758 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Bus STOPPED
+14:17:31,763 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Bus EXITING
+14:17:31,763 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Waiting for child threads to terminate...
+14:17:31,768 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Bus EXITED
+14:17:31,775 cherrypy.error INFO [10/Jul/2020:14:17:31] ENGINE Waiting for thread Thread-1.
+14:17:37,718 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Listening for SIGTERM.
+14:17:37,721 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Bus STARTING
+14:17:37,723 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Set handler for console events.
+14:17:37,727 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Started monitor thread 'Autoreloader'.
+14:17:37,946 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Serving on http://127.0.0.1
+14:17:37,949 cherrypy.error INFO [10/Jul/2020:14:17:37] ENGINE Bus STARTED
+14:17:39,554 cherrypy.error.1755837142664 ERROR [10/Jul/2020:14:17:39] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 58, in index
+    return tmpl.render(title='Запросы юзверей', request_list=User_Request.request_list)
+NameError: name 'User_Request' is not defined
+14:17:39,565 cherrypy.error.1755837142664 INFO [10/Jul/2020:14:17:39] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+14:17:39,569 cherrypy.access.1755837142664 INFO 127.0.0.1 - - [10/Jul/2020:14:17:39] "GET / HTTP/1.1" 500 1641 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:18:35,426 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Listening for SIGTERM.
+14:18:35,429 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Bus STARTING
+14:18:35,431 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Set handler for console events.
+14:18:35,434 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Started monitor thread 'Autoreloader'.
+14:18:35,665 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Serving on http://127.0.0.1
+14:18:35,668 cherrypy.error INFO [10/Jul/2020:14:18:35] ENGINE Bus STARTED
+14:18:38,119 cherrypy.error.2052987528968 ERROR [10/Jul/2020:14:18:38] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 58, in index
+    return tmpl.render(title='Запросы юзверей', request_list=User_Request.request_list)
+NameError: name 'User_Request' is not defined
+14:18:38,132 cherrypy.error.2052987528968 INFO [10/Jul/2020:14:18:38] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+14:18:38,212 cherrypy.access.2052987528968 INFO 127.0.0.1 - - [10/Jul/2020:14:18:38] "GET / HTTP/1.1" 500 1641 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:18:54,404 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:18:54,409 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Stopped thread 'Autoreloader'.
+14:18:54,485 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Bus STOPPING
+14:18:54,598 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:18:54,603 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Removed handler for console events.
+14:18:54,611 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Bus STOPPED
+14:18:54,623 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Bus EXITING
+14:18:54,623 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Waiting for child threads to terminate...
+14:18:54,630 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Bus EXITED
+14:18:54,636 cherrypy.error INFO [10/Jul/2020:14:18:54] ENGINE Waiting for thread Thread-1.
+14:18:58,982 cherrypy.error INFO [10/Jul/2020:14:18:58] ENGINE Listening for SIGTERM.
+14:18:58,986 cherrypy.error INFO [10/Jul/2020:14:18:58] ENGINE Bus STARTING
+14:18:58,990 cherrypy.error INFO [10/Jul/2020:14:18:58] ENGINE Set handler for console events.
+14:18:58,994 cherrypy.error INFO [10/Jul/2020:14:18:58] ENGINE Started monitor thread 'Autoreloader'.
+14:18:59,224 cherrypy.error INFO [10/Jul/2020:14:18:59] ENGINE Serving on http://127.0.0.1
+14:18:59,227 cherrypy.error INFO [10/Jul/2020:14:18:59] ENGINE Bus STARTED
+14:19:01,781 cherrypy.access.2498652575240 INFO 127.0.0.1 - - [10/Jul/2020:14:19:01] "GET / HTTP/1.1" 200 1260 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:19:02,91 cherrypy.access.2498652575240 INFO 127.0.0.1 - - [10/Jul/2020:14:19:02] "GET /css/style.css HTTP/1.1" 200 774 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:19:09,130 cherrypy.access.2498652575240 INFO 127.0.0.1 - - [10/Jul/2020:14:19:09] "GET /log HTTP/1.1" 200 14428 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:19:11,847 cherrypy.access.2498652575240 INFO 127.0.0.1 - - [10/Jul/2020:14:19:11] "GET / HTTP/1.1" 200 1260 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:31:39,945 cherrypy.error INFO [10/Jul/2020:14:31:39] ENGINE Listening for SIGTERM.
+14:31:39,948 cherrypy.error INFO [10/Jul/2020:14:31:39] ENGINE Bus STARTING
+14:31:39,951 cherrypy.error INFO [10/Jul/2020:14:31:39] ENGINE Set handler for console events.
+14:31:39,954 cherrypy.error INFO [10/Jul/2020:14:31:39] ENGINE Started monitor thread 'Autoreloader'.
+14:31:40,173 cherrypy.error INFO [10/Jul/2020:14:31:40] ENGINE Serving on http://127.0.0.1
+14:31:40,175 cherrypy.error INFO [10/Jul/2020:14:31:40] ENGINE Bus STARTED
+14:31:43,590 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:31:43] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:31:43,785 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:31:43] "GET /css/style.css HTTP/1.1" 200 774 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:31:45,111 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:31:45] "GET /log HTTP/1.1" 200 16003 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:31:45,237 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:31:45] "GET /css/style.css HTTP/1.1" 200 774 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:32:07,490 cherrypy.error.1929435587720 ERROR [10/Jul/2020:14:32:07] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 89, in log
+    return tmpl.render(title='Логи', log_list=lines[0:max_pages_to_show])
+TypeError: slice indices must be integers or None or have an __index__ method
+14:32:07,709 cherrypy.error.1929435587720 INFO [10/Jul/2020:14:32:07] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+14:32:07,732 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:32:07] "GET /log?max_pages_to_show=10 HTTP/1.1" 500 1647 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:32:41,412 cherrypy.error.1929435587720 ERROR [10/Jul/2020:14:32:41] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 89, in log
+    return tmpl.render(title='Логи', log_list=lines[0:max_pages_to_show])
+TypeError: slice indices must be integers or None or have an __index__ method
+14:32:41,463 cherrypy.error.1929435587720 INFO [10/Jul/2020:14:32:41] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+14:32:41,480 cherrypy.access.1929435587720 INFO 127.0.0.1 - - [10/Jul/2020:14:32:41] "GET /log?max_pages_to_show=100 HTTP/1.1" 500 1647 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:33:25,934 cherrypy.error INFO [10/Jul/2020:14:33:25] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:33:25,941 cherrypy.error INFO [10/Jul/2020:14:33:25] ENGINE Stopped thread 'Autoreloader'.
+14:33:25,948 cherrypy.error INFO [10/Jul/2020:14:33:25] ENGINE Bus STOPPING
+14:33:26,58 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:33:26,104 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Removed handler for console events.
+14:33:26,112 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Bus STOPPED
+14:33:26,118 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Bus EXITING
+14:33:26,118 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Waiting for child threads to terminate...
+14:33:26,165 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Bus EXITED
+14:33:26,172 cherrypy.error INFO [10/Jul/2020:14:33:26] ENGINE Waiting for thread Thread-1.
+14:33:41,402 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Listening for SIGTERM.
+14:33:41,405 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Bus STARTING
+14:33:41,409 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Set handler for console events.
+14:33:41,415 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Started monitor thread 'Autoreloader'.
+14:33:41,643 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Serving on http://127.0.0.1
+14:33:41,646 cherrypy.error INFO [10/Jul/2020:14:33:41] ENGINE Bus STARTED
+14:33:42,133 cherrypy.error.2677644117128 ERROR [10/Jul/2020:14:33:42] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 89, in log
+    return tmpl.render(title='Логи', log_list=lines[0:max_pages_to_show])
+TypeError: slice indices must be integers or None or have an __index__ method
+14:33:42,187 cherrypy.error.2677644117128 INFO [10/Jul/2020:14:33:42] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+  CACHE-CONTROL: max-age=0
+14:33:42,204 cherrypy.access.2677644117128 INFO 127.0.0.1 - - [10/Jul/2020:14:33:42] "GET /log?max_pages_to_show=100 HTTP/1.1" 500 1647 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:33:43,406 cherrypy.error.2677644117128 ERROR [10/Jul/2020:14:33:43] HTTP 
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 638, in respond
+    self._do_respond(path_info)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cprequest.py", line 697, in _do_respond
+    response.body = self.handler()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\lib\encoding.py", line 219, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpdispatch.py", line 54, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "X:/projects/helper/app_server/main.py", line 89, in log
+    return tmpl.render(title='Логи', log_list=lines[0:max_pages_to_show])
+TypeError: slice indices must be integers or None or have an __index__ method
+14:33:43,428 cherrypy.error.2677644117128 INFO [10/Jul/2020:14:33:43] HTTP 
+Request Headers:
+  Remote-Addr: 127.0.0.1
+  HOST: 127.0.0.1
+  USER-AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  ACCEPT-LANGUAGE: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+  ACCEPT-ENCODING: gzip, deflate
+  CONNECTION: keep-alive
+  COOKIE: csrftoken=ZdbIhaketBcPa2WHkBVZ3Qf1dIzoSnBPwbdWPiEpbhj4Qinrk5fO4fZzp3AMN0b6
+  UPGRADE-INSECURE-REQUESTS: 1
+14:33:43,437 cherrypy.access.2677644117128 INFO 127.0.0.1 - - [10/Jul/2020:14:33:43] "GET /log?max_pages_to_show=100 HTTP/1.1" 500 1647 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:34:17,42 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:34:17,47 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Stopped thread 'Autoreloader'.
+14:34:17,52 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Bus STOPPING
+14:34:17,165 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:34:17,170 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Removed handler for console events.
+14:34:17,178 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Bus STOPPED
+14:34:17,183 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Bus EXITING
+14:34:17,183 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Waiting for child threads to terminate...
+14:34:17,188 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Bus EXITED
+14:34:17,195 cherrypy.error INFO [10/Jul/2020:14:34:17] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:34:18,991 cherrypy.error INFO [10/Jul/2020:14:34:18] ENGINE Listening for SIGTERM.
+14:34:18,994 cherrypy.error INFO [10/Jul/2020:14:34:18] ENGINE Bus STARTING
+14:34:18,998 cherrypy.error INFO [10/Jul/2020:14:34:18] ENGINE Set handler for console events.
+14:34:19,2 cherrypy.error INFO [10/Jul/2020:14:34:19] ENGINE Started monitor thread 'Autoreloader'.
+14:34:19,230 cherrypy.error INFO [10/Jul/2020:14:34:19] ENGINE Serving on http://127.0.0.1
+14:34:19,236 cherrypy.error INFO [10/Jul/2020:14:34:19] ENGINE Bus STARTED
+14:35:13,448 cherrypy.error INFO [10/Jul/2020:14:35:13] ENGINE Listening for SIGTERM.
+14:35:13,453 cherrypy.error INFO [10/Jul/2020:14:35:13] ENGINE Bus STARTING
+14:35:13,460 cherrypy.error INFO [10/Jul/2020:14:35:13] ENGINE Set handler for console events.
+14:35:13,467 cherrypy.error INFO [10/Jul/2020:14:35:13] ENGINE Started monitor thread 'Autoreloader'.
+14:35:14,583 cherrypy.error ERROR [10/Jul/2020:14:35:14] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x000002018F47F788>>
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 115, in free
+    Checker(timeout=0.1).assert_free(host, port)
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 69, in assert_free
+    list(itertools.starmap(self._connect, info))
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 85, in _connect
+    raise PortNotFree(tmpl.format(**locals()))
+portend.PortNotFree: Port 127.0.0.1 is in use on 80.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 230, in publish
+    output.append(listener(*args, **kwargs))
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpserver.py", line 180, in start
+    super(Server, self).start()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\servers.py", line 177, in start
+    portend.free(*self.bind_addr, timeout=Timeouts.free)
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 119, in free
+    raise Timeout("Port {port} not free on {host}.".format(**locals()))
+portend.Timeout: Port 80 not free on 127.0.0.1.
+
+14:35:14,628 cherrypy.error ERROR [10/Jul/2020:14:35:14] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 268, in start
+    self.publish('start')
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 248, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: Timeout('Port 80 not free on 127.0.0.1.')
+
+14:35:14,677 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Bus STOPPING
+14:35:14,686 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) already shut down
+14:35:14,693 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Stopped thread 'Autoreloader'.
+14:35:14,702 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Removed handler for console events.
+14:35:14,709 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Bus STOPPED
+14:35:14,716 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Bus EXITING
+14:35:14,723 cherrypy.error INFO [10/Jul/2020:14:35:14] ENGINE Bus EXITED
+14:35:20,411 cherrypy.access.1994356724808 INFO 127.0.0.1 - - [10/Jul/2020:14:35:20] "GET /log?max_pages_to_show=100 HTTP/1.1" 200 9774 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:35:20,524 cherrypy.access.1994356724808 INFO 127.0.0.1 - - [10/Jul/2020:14:35:20] "GET /css/style.css HTTP/1.1" 200 774 "http://127.0.0.1/log?max_pages_to_show=100" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:35:38,424 cherrypy.access.1994356724808 INFO 127.0.0.1 - - [10/Jul/2020:14:35:38] "GET /log?max_pages_to_show=100 HTTP/1.1" 200 10127 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:35:38,481 cherrypy.access.1994356724808 INFO 127.0.0.1 - - [10/Jul/2020:14:35:38] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log?max_pages_to_show=100" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:35:43,457 cherrypy.access.1994356724808 INFO 127.0.0.1 - - [10/Jul/2020:14:35:43] "GET /log?max_pages_to_show=10 HTTP/1.1" 200 2332 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:35:53,398 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:35:53,403 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Stopped thread 'Autoreloader'.
+14:35:53,407 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Bus STOPPING
+14:35:53,534 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:35:53,579 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Removed handler for console events.
+14:35:53,585 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Bus STOPPED
+14:35:53,592 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Bus EXITING
+14:35:53,592 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Waiting for child threads to terminate...
+14:35:53,639 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Bus EXITED
+14:35:53,646 cherrypy.error INFO [10/Jul/2020:14:35:53] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:35:55,312 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Listening for SIGTERM.
+14:35:55,315 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Bus STARTING
+14:35:55,318 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Set handler for console events.
+14:35:55,321 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Started monitor thread 'Autoreloader'.
+14:35:55,541 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Serving on http://127.0.0.1
+14:35:55,545 cherrypy.error INFO [10/Jul/2020:14:35:55] ENGINE Bus STARTED
+14:36:19,165 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Listening for SIGTERM.
+14:36:19,171 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Bus STARTING
+14:36:19,174 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Set handler for console events.
+14:36:19,177 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Started monitor thread 'Autoreloader'.
+14:36:19,399 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Serving on http://127.0.0.1
+14:36:19,485 cherrypy.error INFO [10/Jul/2020:14:36:19] ENGINE Bus STARTED
+14:36:19,715 cherrypy.access.1800518025544 INFO 127.0.0.1 - - [10/Jul/2020:14:36:19] "GET /log?max_pages_to_show=10 HTTP/1.1" 200 1717 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:36:19,742 cherrypy.access.1800518025544 INFO 127.0.0.1 - - [10/Jul/2020:14:36:19] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log?max_pages_to_show=10" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:36:22,964 cherrypy.access.1800518025544 INFO 127.0.0.1 - - [10/Jul/2020:14:36:22] "GET /log?max_pages_to_show=10 HTTP/1.1" 200 1985 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:36:23,15 cherrypy.access.1800518025544 INFO 127.0.0.1 - - [10/Jul/2020:14:36:23] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log?max_pages_to_show=10" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:36:30,74 cherrypy.access.1800518025544 INFO 127.0.0.1 - - [10/Jul/2020:14:36:30] "GET /log HTTP/1.1" 200 37341 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:36:38,81 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:36:38,86 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Stopped thread 'Autoreloader'.
+14:36:38,90 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Bus STOPPING
+14:36:38,217 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:36:38,223 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Removed handler for console events.
+14:36:38,230 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Bus STOPPED
+14:36:38,235 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Bus EXITING
+14:36:38,236 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Waiting for child threads to terminate...
+14:36:38,240 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Bus EXITED
+14:36:38,245 cherrypy.error INFO [10/Jul/2020:14:36:38] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:36:39,877 cherrypy.error INFO [10/Jul/2020:14:36:39] ENGINE Listening for SIGTERM.
+14:36:39,880 cherrypy.error INFO [10/Jul/2020:14:36:39] ENGINE Bus STARTING
+14:36:39,884 cherrypy.error INFO [10/Jul/2020:14:36:39] ENGINE Set handler for console events.
+14:36:39,888 cherrypy.error INFO [10/Jul/2020:14:36:39] ENGINE Started monitor thread 'Autoreloader'.
+14:36:40,109 cherrypy.error INFO [10/Jul/2020:14:36:40] ENGINE Serving on http://127.0.0.1
+14:36:40,113 cherrypy.error INFO [10/Jul/2020:14:36:40] ENGINE Bus STARTED
+14:37:26,458 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:37:26,462 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Stopped thread 'Autoreloader'.
+14:37:26,468 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Bus STOPPING
+14:37:26,602 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 80)) shut down
+14:37:26,619 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Removed handler for console events.
+14:37:26,636 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Bus STOPPED
+14:37:26,644 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Bus EXITING
+14:37:26,644 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Waiting for child threads to terminate...
+14:37:26,650 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Bus EXITED
+14:37:26,660 cherrypy.error INFO [10/Jul/2020:14:37:26] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:37:27,938 cherrypy.error INFO [10/Jul/2020:14:37:27] ENGINE Listening for SIGTERM.
+14:37:27,941 cherrypy.error INFO [10/Jul/2020:14:37:27] ENGINE Bus STARTING
+14:37:27,953 cherrypy.error INFO [10/Jul/2020:14:37:27] ENGINE Set handler for console events.
+14:37:27,956 cherrypy.error INFO [10/Jul/2020:14:37:27] ENGINE Started monitor thread 'Autoreloader'.
+14:37:28,191 cherrypy.error INFO [10/Jul/2020:14:37:28] ENGINE Serving on http://0.0.0.0
+14:37:28,194 cherrypy.error INFO [10/Jul/2020:14:37:28] ENGINE Bus STARTED
+14:38:24,898 cherrypy.error INFO [10/Jul/2020:14:38:24] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:38:24,901 cherrypy.error INFO [10/Jul/2020:14:38:24] ENGINE Stopped thread 'Autoreloader'.
+14:38:24,904 cherrypy.error INFO [10/Jul/2020:14:38:24] ENGINE Bus STOPPING
+14:38:25,26 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:38:25,38 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Removed handler for console events.
+14:38:25,42 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Bus STOPPED
+14:38:25,45 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Bus EXITING
+14:38:25,45 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Waiting for child threads to terminate...
+14:38:25,93 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Bus EXITED
+14:38:25,107 cherrypy.error INFO [10/Jul/2020:14:38:25] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:38:26,698 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Listening for SIGTERM.
+14:38:26,702 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Bus STARTING
+14:38:26,704 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Set handler for console events.
+14:38:26,708 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Started monitor thread 'Autoreloader'.
+14:38:26,924 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Serving on http://0.0.0.0
+14:38:26,928 cherrypy.error INFO [10/Jul/2020:14:38:26] ENGINE Bus STARTED
+14:38:29,94 cherrypy.access.2469076440200 INFO 127.0.0.1 - - [10/Jul/2020:14:38:29] "GET /l HTTP/1.1" 404 1494 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:38:49,846 cherrypy.access.2469076440200 INFO 127.0.0.1 - - [10/Jul/2020:14:38:49] "GET /l HTTP/1.1" 404 1494 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:38:50,888 cherrypy.access.2469076440200 INFO 127.0.0.1 - - [10/Jul/2020:14:38:50] "GET /l HTTP/1.1" 404 1494 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:39:30,937 cherrypy.error INFO [10/Jul/2020:14:39:30] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:39:30,941 cherrypy.error INFO [10/Jul/2020:14:39:30] ENGINE Stopped thread 'Autoreloader'.
+14:39:30,952 cherrypy.error INFO [10/Jul/2020:14:39:30] ENGINE Bus STOPPING
+14:39:31,66 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:39:31,71 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Removed handler for console events.
+14:39:31,77 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Bus STOPPED
+14:39:31,81 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Bus EXITING
+14:39:31,82 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Waiting for child threads to terminate...
+14:39:31,86 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Bus EXITED
+14:39:31,90 cherrypy.error INFO [10/Jul/2020:14:39:31] ENGINE Waiting for thread Thread-1.
+14:39:40,359 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Listening for SIGTERM.
+14:39:40,362 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Bus STARTING
+14:39:40,367 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Set handler for console events.
+14:39:40,377 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Started monitor thread 'Autoreloader'.
+14:39:40,619 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Serving on http://0.0.0.0
+14:39:40,630 cherrypy.error INFO [10/Jul/2020:14:39:40] ENGINE Bus STARTED
+14:39:42,596 cherrypy.access.2441341539848 INFO 127.0.0.1 - - [10/Jul/2020:14:39:42] "GET /l HTTP/1.1" 404 1494 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:41:17,535 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:41:17,548 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Stopped thread 'Autoreloader'.
+14:41:17,853 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Bus STOPPING
+14:41:17,983 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:41:17,988 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Removed handler for console events.
+14:41:17,993 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Bus STOPPED
+14:41:17,998 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Bus EXITING
+14:41:17,998 cherrypy.error INFO [10/Jul/2020:14:41:17] ENGINE Waiting for child threads to terminate...
+14:41:18,12 cherrypy.error INFO [10/Jul/2020:14:41:18] ENGINE Bus EXITED
+14:41:18,17 cherrypy.error INFO [10/Jul/2020:14:41:18] ENGINE Waiting for thread Thread-1.
+14:41:41,498 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Listening for SIGTERM.
+14:41:41,500 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Bus STARTING
+14:41:41,542 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Set handler for console events.
+14:41:41,644 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Started monitor thread 'Autoreloader'.
+14:41:41,889 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Serving on http://0.0.0.0
+14:41:41,895 cherrypy.error INFO [10/Jul/2020:14:41:41] ENGINE Bus STARTED
+14:41:45,803 cherrypy.access.2737405060744 INFO 127.0.0.1 - - [10/Jul/2020:14:41:45] "GET /l HTTP/1.1" 200 15 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:42:03,660 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:42:03,666 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Stopped thread 'Autoreloader'.
+14:42:03,677 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Bus STOPPING
+14:42:03,818 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:42:03,848 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Removed handler for console events.
+14:42:03,855 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Bus STOPPED
+14:42:03,903 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Bus EXITING
+14:42:03,903 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Waiting for child threads to terminate...
+14:42:03,908 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Bus EXITED
+14:42:03,919 cherrypy.error INFO [10/Jul/2020:14:42:03] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:42:05,629 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Listening for SIGTERM.
+14:42:05,637 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Bus STARTING
+14:42:05,645 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Set handler for console events.
+14:42:05,662 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Started monitor thread 'Autoreloader'.
+14:42:05,851 cherrypy.access.2143363826760 INFO 127.0.0.1 - - [10/Jul/2020:14:42:05] "GET /l HTTP/1.1" 200 15 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:42:05,914 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Serving on http://0.0.0.0
+14:42:05,923 cherrypy.error INFO [10/Jul/2020:14:42:05] ENGINE Bus STARTED
+14:42:06,628 cherrypy.access.2143363826760 INFO 127.0.0.1 - - [10/Jul/2020:14:42:06] "GET /l HTTP/1.1" 200 15 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:42:18,252 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:42:18,256 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Stopped thread 'Autoreloader'.
+14:42:18,261 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Bus STOPPING
+14:42:18,379 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:42:18,386 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Removed handler for console events.
+14:42:18,391 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Bus STOPPED
+14:42:18,397 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Bus EXITING
+14:42:18,398 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Waiting for child threads to terminate...
+14:42:18,406 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Bus EXITED
+14:42:18,412 cherrypy.error INFO [10/Jul/2020:14:42:18] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:42:20,0 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Listening for SIGTERM.
+14:42:20,3 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Bus STARTING
+14:42:20,43 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Set handler for console events.
+14:42:20,90 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Started monitor thread 'Autoreloader'.
+14:42:20,259 cherrypy.access.2106870838600 INFO 127.0.0.1 - - [10/Jul/2020:14:42:20] "GET /l HTTP/1.1" 200 19 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:42:20,314 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Serving on http://0.0.0.0
+14:42:20,322 cherrypy.error INFO [10/Jul/2020:14:42:20] ENGINE Bus STARTED
+14:42:26,930 cherrypy.access.2106870838600 INFO 127.0.0.1 - - [10/Jul/2020:14:42:26] "GET / HTTP/1.1" 200 1258 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:43:03,503 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:43:03,553 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Stopped thread 'Autoreloader'.
+14:43:03,580 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Bus STOPPING
+14:43:03,741 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:43:03,751 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Removed handler for console events.
+14:43:03,800 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Bus STOPPED
+14:43:03,808 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Bus EXITING
+14:43:03,809 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Waiting for child threads to terminate...
+14:43:03,873 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Bus EXITED
+14:43:03,881 cherrypy.error INFO [10/Jul/2020:14:43:03] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:43:05,720 cherrypy.error INFO [10/Jul/2020:14:43:05] ENGINE Listening for SIGTERM.
+14:43:05,723 cherrypy.error INFO [10/Jul/2020:14:43:05] ENGINE Bus STARTING
+14:43:05,769 cherrypy.error INFO [10/Jul/2020:14:43:05] ENGINE Set handler for console events.
+14:43:05,813 cherrypy.error INFO [10/Jul/2020:14:43:05] ENGINE Started monitor thread 'Autoreloader'.
+14:43:06,45 cherrypy.error INFO [10/Jul/2020:14:43:06] ENGINE Serving on http://0.0.0.0
+14:43:06,51 cherrypy.error INFO [10/Jul/2020:14:43:06] ENGINE Bus STARTED
+14:43:15,311 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:43:15,357 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Stopped thread 'Autoreloader'.
+14:43:15,403 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Bus STOPPING
+14:43:15,530 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:43:15,546 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Removed handler for console events.
+14:43:15,551 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Bus STOPPED
+14:43:15,556 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Bus EXITING
+14:43:15,556 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Waiting for child threads to terminate...
+14:43:15,561 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Bus EXITED
+14:43:15,575 cherrypy.error INFO [10/Jul/2020:14:43:15] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:43:16,885 cherrypy.error INFO [10/Jul/2020:14:43:16] ENGINE Listening for SIGTERM.
+14:43:16,888 cherrypy.error INFO [10/Jul/2020:14:43:16] ENGINE Bus STARTING
+14:43:16,927 cherrypy.error INFO [10/Jul/2020:14:43:16] ENGINE Set handler for console events.
+14:43:16,973 cherrypy.error INFO [10/Jul/2020:14:43:16] ENGINE Started monitor thread 'Autoreloader'.
+14:43:17,214 cherrypy.error INFO [10/Jul/2020:14:43:17] ENGINE Serving on http://0.0.0.0
+14:43:17,220 cherrypy.error INFO [10/Jul/2020:14:43:17] ENGINE Bus STARTED
+14:44:27,332 cherrypy.access.1540289851976 INFO 127.0.0.1 - - [10/Jul/2020:14:44:27] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:44:27,457 cherrypy.access.1540289851976 INFO 127.0.0.1 - - [10/Jul/2020:14:44:27] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:46:27,651 cherrypy.access.1540289851976 INFO 127.0.0.1 - - [10/Jul/2020:14:46:27] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:46:27,752 cherrypy.access.1540289851976 INFO 127.0.0.1 - - [10/Jul/2020:14:46:27] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:46:41,317 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Restarting because X:/projects/helper/app_server/main.py changed.
+14:46:41,324 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Stopped thread 'Autoreloader'.
+14:46:41,373 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Bus STOPPING
+14:46:41,493 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) shut down
+14:46:41,518 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Removed handler for console events.
+14:46:41,528 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Bus STOPPED
+14:46:41,537 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Bus EXITING
+14:46:41,537 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Waiting for child threads to terminate...
+14:46:41,545 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Bus EXITED
+14:46:41,600 cherrypy.error INFO [10/Jul/2020:14:46:41] ENGINE Re-spawning C:\Program Files\Python37\python.exe X:/projects/helper/app_server/main.py
+14:46:43,280 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Listening for SIGTERM.
+14:46:43,283 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Bus STARTING
+14:46:43,319 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Set handler for console events.
+14:46:43,368 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Started monitor thread 'Autoreloader'.
+14:46:43,595 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Serving on http://0.0.0.0
+14:46:43,601 cherrypy.error INFO [10/Jul/2020:14:46:43] ENGINE Bus STARTED
+14:48:28,191 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:48:28] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:48:28,299 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:48:28] "GET /css/style.css HTTP/1.1" 200 776 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:50:28,681 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:50:28] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:50:28,739 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:50:28] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:52:29,85 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:52:29] "GET / HTTP/1.1" 200 1258 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:52:29,202 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:52:29] "GET /css/style.css HTTP/1.1" 200 776 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:53:53,942 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:53:53] "GET / HTTP/1.1" 200 1258 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:53:54,78 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:53:54] "GET /css/style.css HTTP/1.1" 200 781 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:53:56,625 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:53:56] "GET /log HTTP/1.1" 200 58382 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:54:12,390 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:54:12] "GET /log HTTP/1.1" 200 57013 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:54:12,449 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:54:12] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:54:36,923 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:54:36] "GET /log HTTP/1.1" 200 58866 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:54:37,0 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:54:37] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:56:37,231 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:56:37] "GET /log HTTP/1.1" 200 55653 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:56:37,310 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:56:37] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:57:42,465 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:57:42] "GET / HTTP/1.1" 200 873 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:57:42,525 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:57:42] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:57:43,471 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:57:43] "GET /log HTTP/1.1" 200 55952 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:57:46,950 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:57:46] "GET / HTTP/1.1" 200 873 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:59:16,388 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:59:16] "GET / HTTP/1.1" 200 961 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+14:59:16,541 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:14:59:16] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:01:16,827 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:01:16] "GET / HTTP/1.1" 200 973 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:01:16,881 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:01:16] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:03:17,230 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:03:17] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:03:17,348 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:03:17] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:05:17,590 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:05:17] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:05:17,693 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:05:17] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:07:18,30 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:07:18] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:07:18,122 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:07:18] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:09:18,456 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:09:18] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:09:18,593 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:09:18] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:11:18,826 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:11:18] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:11:18,927 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:11:18] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:13:19,262 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:13:19] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:13:19,404 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:13:19] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:15:19,696 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:15:19] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:15:19,822 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:15:19] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:17:20,142 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:17:20] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:17:20,253 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:17:20] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:19:20,581 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:19:20] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:19:20,657 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:19:20] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:21:20,977 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:21:20] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:21:21,77 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:21:21] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:23:21,387 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:23:21] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:23:21,482 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:23:21] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:25:21,833 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:25:21] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:25:21,907 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:25:21] "GET /css/style.css HTTP/1.1" 200 781 "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:25:22,190 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:25:22] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:27:22,244 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:27:22] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:27:22,352 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:27:22] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:27:22,570 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:27:22] "GET /favicon.ico HTTP/1.1" 200 1406 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:29:22,728 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:29:22] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:29:22,832 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:29:22] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:31:23,104 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:31:23] "GET / HTTP/1.1" 200 961 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:31:23,212 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:31:23] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:32:20,701 cherrypy.error INFO [10/Jul/2020:15:32:20] ENGINE Listening for SIGTERM.
+15:32:20,704 cherrypy.error INFO [10/Jul/2020:15:32:20] ENGINE Bus STARTING
+15:32:20,740 cherrypy.error INFO [10/Jul/2020:15:32:20] ENGINE Set handler for console events.
+15:32:20,787 cherrypy.error INFO [10/Jul/2020:15:32:20] ENGINE Started monitor thread 'Autoreloader'.
+15:32:21,902 cherrypy.error ERROR [10/Jul/2020:15:32:21] ENGINE Error in 'start' listener <bound method Server.start of <cherrypy._cpserver.Server object at 0x00000135D95268C8>>
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 115, in free
+    Checker(timeout=0.1).assert_free(host, port)
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 69, in assert_free
+    list(itertools.starmap(self._connect, info))
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 85, in _connect
+    raise PortNotFree(tmpl.format(**locals()))
+portend.PortNotFree: Port 127.0.0.1 is in use on 80.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 230, in publish
+    output.append(listener(*args, **kwargs))
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\_cpserver.py", line 180, in start
+    super(Server, self).start()
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\servers.py", line 177, in start
+    portend.free(*self.bind_addr, timeout=Timeouts.free)
+  File "C:\Program Files\Python37\lib\site-packages\portend.py", line 119, in free
+    raise Timeout("Port {port} not free on {host}.".format(**locals()))
+portend.Timeout: Port 80 not free on 0.0.0.0.
+
+15:32:21,981 cherrypy.error ERROR [10/Jul/2020:15:32:21] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 268, in start
+    self.publish('start')
+  File "C:\Program Files\Python37\lib\site-packages\cherrypy\process\wspbus.py", line 248, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: Timeout('Port 80 not free on 0.0.0.0.')
+
+15:32:21,986 cherrypy.error INFO [10/Jul/2020:15:32:21] ENGINE Bus STOPPING
+15:32:21,991 cherrypy.error INFO [10/Jul/2020:15:32:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 80)) already shut down
+15:32:21,996 cherrypy.error INFO [10/Jul/2020:15:32:21] ENGINE Stopped thread 'Autoreloader'.
+15:32:22,41 cherrypy.error INFO [10/Jul/2020:15:32:22] ENGINE Removed handler for console events.
+15:32:22,46 cherrypy.error INFO [10/Jul/2020:15:32:22] ENGINE Bus STOPPED
+15:32:22,58 cherrypy.error INFO [10/Jul/2020:15:32:22] ENGINE Bus EXITING
+15:32:22,103 cherrypy.error INFO [10/Jul/2020:15:32:22] ENGINE Bus EXITED
+15:32:34,382 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:32:34] "GET / HTTP/1.1" 200 961 "http://127.0.0.1/log" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"
+15:32:34,481 cherrypy.access.2769182180296 INFO 127.0.0.1 - - [10/Jul/2020:15:32:34] "GET /css/style.css HTTP/1.1" 304 - "http://127.0.0.1/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Firefox/78.0"

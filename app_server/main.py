@@ -1,116 +1,108 @@
 import cherrypy
-from jinja2 import Environment, FileSystemLoader
-import requests
-from time import sleep, ctime
-from pdb import set_trace as d
 import os
 from threading import Thread
 import logging
+from jinja2 import Environment, FileSystemLoader
+from time import sleep, ctime
 
-
-logging.basicConfig(filename='helper.log',filemode='a',format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-					datefmt='%H:%M:%S',level=logging.DEBUG)
+logging.basicConfig(filename='helper.log', filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S', level=logging.DEBUG)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 env = Environment(loader=FileSystemLoader('templates'))
-glpi_ip = '192.168.112.112'
-request_old = 2
 
-def old_cheker():
-	while True:
-		sleep(180)
-		for user_request in User_Request.request_list:
-	
-			if user_request.old > request_old:
-				logging.info(f"Removing request {user_request.computername} {user_request.username}")
-				User_Request.request_list.remove(user_request)
-
-			else:
-				user_request.old += 1
+OLDER_LINER = 2
 
 
-class Agent:   # class deprecated
-	agent_list = list()
+class UserRequest:
+    """
+    Класс - структура юзерского запроса для отображения в web-интерфейсе
+    """
+    request_list = list()
 
-	def __init__(self, username, ip):
-		self.ip = ip
-		self.name = username
-		Agent.agent_list.append(self)
-		self.status = 'Registred'
-		self.update = 0
-	
-	def __str__ (self):
-		return 'Agent:' + self.ip + ', Status' + self.status
+    def __init__(self, username, computername, iplist):
+        self.computername = computername
+        self.username = username
+        self.status = "new"
+        self.ip = iplist
+        self.old = 0
+        self.request_time = ctime()
+        UserRequest.request_list.append(self)
 
-class User_Request():
-	request_list = list()
-	def __init__(self, username, computername, iplist):
-		self.computername = computername
-		self.username = username
-		self.glpi_link = "http://{}/glpi/front/computer.php?is_deleted=0&as_map=0&criteria%5B0%5D%5Blink%5D=AND&criteria%5B0%5D%5Bfield%5D=1&criteria%5B0%5D%5Bsearchtype%5D=contains&criteria%5B0%5D%5Bvalue%5D={}&search=%D0%9F%D0%BE%D0%B8%D1%81%D0%BA&itemtype=Computer&start=0".format(glpi_ip, self.computername)
-		self.status = "new"
-		self.ip = iplist
-		self.old = 0
-		self.request_time = ctime()
-		User_Request.request_list.append(self)
+    @staticmethod
+    def old_checker(interval=180):
+        """
+        Функция проверяет возраст объектов каждые interval сек, возраст измеряется в количестве проверок
+        если оюъект устарел, то удаляется.
+        """
+        while True:
+            sleep(interval)
+            for user_request in __class__.request_list:
+
+                if user_request.old > OLDER_LINER:
+                    logging.info(f"Removing request {user_request.computername} {user_request.username}")
+                    __class__.request_list.remove(user_request)
+
+                else:
+                    user_request.old += 1
+
 
 class Root:
 
-	@cherrypy.expose
-	def index(self):
-		tmpl = env.get_template('userlist.html')
-		print(len(Agent.agent_list))
-		return tmpl.render(title='Запросы юзверей',request_list=User_Request.request_list)
+    @cherrypy.expose
+    def index(self):
+        """
+        вэб-роут для адреса index, основоной админский интерфейс, шаблон userlist.html
 
-	@cherrypy.expose
-	def register_user_request(self,username,computername,iplist):
-		#ip = cherrypy.request.remote.ip
-		print("Agent {} registred".format(username), iplist)
-		if type(iplist) == str :
-			ips = list()
-			ips.append(iplist)
-			User_Request(username, computername, ips)
-		else:
-			User_Request(username, computername, iplist)
+        """
+        tmpl = env.get_template('userlist.html')
 
-	@cherrypy.expose
-	def connect(self):
-		pass
+        return tmpl.render(title='Запросы юзерей', request_list=UserRequest.request_list)
 
-	def error_page_404(status, message, traceback, version):
-		return "404 Error!"
-	
-	def setstatus(self, username, status):											# status: 0 - connected, 1 - wait connect
-		for agent in Agent.agent_list:
-			if agent.name == username and agent.ip == cherrypy.request.remote.ip:
-				agent.status = status
+    @cherrypy.expose
+    def register_user_request(self, username, computername, iplist):
+        """
+        вэб-роут для приёма данных о компах юзеров от помошника, данные приходят в POST
+        """
 
-	@cherrypy.expose			
-	def log(self):
-		tmpl = env.get_template('log.html')
-		f = open('helper.log','r')
-		lines = f.readlines()
-		#print('LOG:', lines[0])
-
-		#splited_lines = lines.split("/n")
-
-		lines.reverse()
-		#for line in lines[0:5]:
-		#	line.replace('\n','<br>')
-		f.close()
-		return tmpl.render(title='Логи',log_list=lines[0:500])
+        if type(iplist) == str:
+            """ если пришла строка, а не список, то лучше обернуть её в список"""
+            ips = list()
+            ips.append(iplist)
+            UserRequest(username, computername, ips)
+        else:
+            UserRequest(username, computername, iplist)
 
 
 
-cherrypy.config.update({'error_page.404': Root.error_page_404})
+    def default(self):
+        """ Обработчик ошибки 404"""
+        return "404 Page not Found!"
+    default.exposed = True
+
+    @cherrypy.expose
+    def log(self, max_pages_to_show=500):
+        """Вэброут для страницы чтения логов, читаем файл и переворачиваем,
+         чтобы видеть сначала свежие логи. 500 строк обычно достаточно"""
+
+        tmpl = env.get_template('log.html')
+        f = open('helper.log', 'r')
+        lines = f.readlines()
+        lines.reverse()
+        f.close()
+        return tmpl.render(title='Логи', log_list=lines[0:int(max_pages_to_show)])
+
+
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
-						'server.socket_port': 80,
-						})
+                        'server.socket_port': 80,
+                        })
 conf = {'/css':
-        { 'tools.staticdir.on':True,
-          'tools.staticdir.dir': os.path.join(current_dir, 'css')},
+            {'tools.staticdir.on': True,
+             'tools.staticdir.dir': os.path.join(current_dir, 'css')},
         '/images': {'tools.staticdir.on': True,
-                      'tools.staticdir.dir': os.path.join(current_dir, 'images')}}
-checker_Thread = Thread(target=old_cheker).start()
-#checker_Thread.join()
-cherrypy.quickstart(Root(),'/',config=conf)
+                    'tools.staticdir.dir': os.path.join(current_dir, 'images')}}
+
+
+checker_Thread = Thread(target=UserRequest.old_checker).start()
+cherrypy.quickstart(Root(), '/', config=conf)
