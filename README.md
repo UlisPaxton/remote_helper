@@ -2,7 +2,7 @@
   To install:
   - clone
   - install cherrypy module
-  - install jinja2
+  - install jinja2 module
 # Asistent - 
   useragent to start VNC Server and send The Data about an User
   before use:
