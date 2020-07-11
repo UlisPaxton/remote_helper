@@ -1,9 +1,10 @@
-import cherrypy
 import os
-from threading import Thread
 import logging
-from jinja2 import Environment, FileSystemLoader
 from time import sleep, ctime
+from threading import Thread
+from jinja2 import Environment, FileSystemLoader
+import cherrypy
+
 
 logging.basicConfig(filename='helper.log', filemode='a',
                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
@@ -12,7 +13,7 @@ logging.basicConfig(filename='helper.log', filemode='a',
 current_dir = os.path.dirname(os.path.abspath(__file__))
 env = Environment(loader=FileSystemLoader('templates'))
 
-OLDER_LINER = 2
+OLDER_LINER = 2  # """Сколько проверок переживёт запрос, перед удалением"""
 
 
 class UserRequest:
